@@ -1,0 +1,12 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfplan
+tfplan
+
+# Valori private (emailuri)
+*.tfvars
+!*.tfvars.example
+
+placeholder.zip
