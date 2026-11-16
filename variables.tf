@@ -47,3 +47,19 @@ variable "github_owner" {
   type    = string
   default = "MurarescuSebastianMarian"
 }
+
+# GitHub pune ID-urile numerice in claim-ul "sub" (subiect imuabil): repo:<owner>@<owner_id>/<repo>@<repo_id>:ref:...
+variable "github_owner_id" {
+  type    = string
+  default = "130826088"
+}
+
+variable "github_repo_id_be" {
+  type    = string
+  default = "1459699605"
+}
+
+variable "github_repo_id_fe" {
+  type    = string
+  default = "1459698390"
+}

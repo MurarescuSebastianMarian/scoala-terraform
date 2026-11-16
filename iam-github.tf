@@ -17,7 +17,7 @@ resource "aws_iam_role" "deploy_be" {
       Condition = {
         StringEquals = {
           "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
-          "token.actions.githubusercontent.com:sub" = "repo:${var.github_owner}/scoala-be:ref:refs/heads/main"
+          "token.actions.githubusercontent.com:sub" = "repo:${var.github_owner}@${var.github_owner_id}/scoala-be@${var.github_repo_id_be}:ref:refs/heads/main"
         }
       }
     }]
@@ -51,7 +51,7 @@ resource "aws_iam_role" "deploy_fe" {
       Condition = {
         StringEquals = {
           "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
-          "token.actions.githubusercontent.com:sub" = "repo:${var.github_owner}/scoala-fe:ref:refs/heads/main"
+          "token.actions.githubusercontent.com:sub" = "repo:${var.github_owner}@${var.github_owner_id}/scoala-fe@${var.github_repo_id_fe}:ref:refs/heads/main"
         }
       }
     }]
